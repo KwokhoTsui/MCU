@@ -11,19 +11,9 @@ out ：MUX的输出
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module MUX_5_2_1(
-in_0, in_1, sel, out
-    );
+module MUX_5_2_1(in_0, in_1, sel, out);
     input[4:0] in_0, in_1;
     input sel;
-    output reg [4:0] out;
-    
-    always @ (*)
-		begin
-			case(sel)
-				1'b0: out = in_0;
-				1'b1: out = in_1;
-			endcase
-		end
-    
+    output [4:0] out;
+	assign out = (sel == in_0 ? in_0:in_1);
 endmodule

@@ -11,19 +11,9 @@ out £ºMUXµÄÊä³ö
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module MUX_2_1(
-in_0, in_1, sel, out
-    );
+module MUX_2_1(in_0, in_1, sel, out);
     input[31:0] in_0, in_1;
     input sel;
-    output reg [31:0] out;
-    
-    always @ (*)
-		begin
-			case(sel)
-				1'b0: out = in_0;
-				1'b1: out = in_1;
-			endcase
-		end
-    
+    output [31:0] out;
+	assign out = (sel == 1'b0 ? in_0:in_1);
 endmodule
