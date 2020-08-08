@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module control_unit(op,funct,reset,MemtoReg,RegDst,MemWrite,AluControl,AluSrc,Branch,RegWrite,Jump);
+module Control_Unit(op,funct,reset,MemtoReg,RegDst,MemWrite,AluControl,AluSrc,Branch,RegWrite,Jump);
 input reset;
 input [5:0]op;
 input [5:0]funct;
