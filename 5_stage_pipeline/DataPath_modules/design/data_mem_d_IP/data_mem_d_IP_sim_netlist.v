@@ -1,18 +1,18 @@
-// Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Wed Aug  5 12:22:18 2020
-// Host        : DESKTOP-PIGH0UD running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top data_mem_d_IP -prefix
-//               data_mem_d_IP_ data_mem_d_IP_sim_netlist.v
+// Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+// Date        : Sun Aug  9 17:12:31 2020
+// Host        : LAPTOP-4SNJPT7S running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/5_stage_pipeline/DataPath_modules/design/data_mem_d_IP/data_mem_d_IP_sim_netlist.v
 // Design      : data_mem_d_IP
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
-// Device      : xc7a35ticpg236-1L
+// Device      : xc7a35tlcpg236-2L
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "data_mem_d_IP,dist_mem_gen_v8_0_13,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "dist_mem_gen_v8_0_13,Vivado 2019.2" *) 
+(* CHECK_LICENSE_TYPE = "data_mem_d_IP,dist_mem_gen_v8_0_12,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "dist_mem_gen_v8_0_12,Vivado 2018.3" *) 
 (* NotValidForBitStream *)
 module data_mem_d_IP
    (a,
@@ -67,7 +67,7 @@ module data_mem_d_IP
   (* c_reg_a_d_inputs = "0" *) 
   (* c_sync_enable = "1" *) 
   (* c_width = "32" *) 
-  data_mem_d_IP_dist_mem_gen_v8_0_13 U0
+  data_mem_d_IP_dist_mem_gen_v8_0_12 U0
        (.a(a),
         .clk(clk),
         .d(d),
@@ -97,8 +97,8 @@ endmodule
 (* C_MEM_INIT_FILE = "data_mem_d_IP.mif" *) (* C_MEM_TYPE = "1" *) (* C_PARSER_TYPE = "1" *) 
 (* C_PIPELINE_STAGES = "0" *) (* C_QCE_JOINED = "0" *) (* C_QUALIFY_WE = "0" *) 
 (* C_READ_MIF = "1" *) (* C_REG_A_D_INPUTS = "0" *) (* C_REG_DPRA_INPUT = "0" *) 
-(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "32" *) 
-module data_mem_d_IP_dist_mem_gen_v8_0_13
+(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "32" *) (* ORIG_REF_NAME = "dist_mem_gen_v8_0_12" *) 
+module data_mem_d_IP_dist_mem_gen_v8_0_12
    (a,
     d,
     dpra,
@@ -239,7 +239,7 @@ module data_mem_d_IP_dist_mem_gen_v8_0_13
   assign qspo[0] = \<const0> ;
   GND GND
        (.G(\<const0> ));
-  data_mem_d_IP_dist_mem_gen_v8_0_13_synth \synth_options.dist_mem_inst 
+  data_mem_d_IP_dist_mem_gen_v8_0_12_synth \synth_options.dist_mem_inst 
        (.a(a),
         .clk(clk),
         .d(d),
@@ -247,7 +247,8 @@ module data_mem_d_IP_dist_mem_gen_v8_0_13
         .we(we));
 endmodule
 
-module data_mem_d_IP_dist_mem_gen_v8_0_13_synth
+(* ORIG_REF_NAME = "dist_mem_gen_v8_0_12_synth" *) 
+module data_mem_d_IP_dist_mem_gen_v8_0_12_synth
    (spo,
     clk,
     d,
@@ -273,6 +274,7 @@ module data_mem_d_IP_dist_mem_gen_v8_0_13_synth
         .we(we));
 endmodule
 
+(* ORIG_REF_NAME = "spram" *) 
 module data_mem_d_IP_spram
    (spo,
     clk,
@@ -612,13 +614,6 @@ module data_mem_d_IP_spram
         .D(spo[9]),
         .Q(qspo_int[9]),
         .R(1'b0));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "0" *) 
-  (* ram_slice_end = "0" *) 
   RAM128X1S #(
     .INIT(128'h0000000000000000000000103D000812)) 
     ram_reg_0_127_0_0
@@ -633,13 +628,6 @@ module data_mem_d_IP_spram
         .O(spo[0]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "10" *) 
-  (* ram_slice_end = "10" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000010000000810)) 
     ram_reg_0_127_10_10
@@ -654,13 +642,6 @@ module data_mem_d_IP_spram
         .O(spo[10]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "11" *) 
-  (* ram_slice_end = "11" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000010000218810)) 
     ram_reg_0_127_11_11
@@ -675,13 +656,6 @@ module data_mem_d_IP_spram
         .O(spo[11]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "12" *) 
-  (* ram_slice_end = "12" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000010002062890)) 
     ram_reg_0_127_12_12
@@ -696,13 +670,6 @@ module data_mem_d_IP_spram
         .O(spo[12]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "13" *) 
-  (* ram_slice_end = "13" *) 
   RAM128X1S #(
     .INIT(128'h0000000000000000000001000237B890)) 
     ram_reg_0_127_13_13
@@ -717,13 +684,6 @@ module data_mem_d_IP_spram
         .O(spo[13]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "14" *) 
-  (* ram_slice_end = "14" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000010000079810)) 
     ram_reg_0_127_14_14
@@ -738,13 +698,6 @@ module data_mem_d_IP_spram
         .O(spo[14]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "15" *) 
-  (* ram_slice_end = "15" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000010002002890)) 
     ram_reg_0_127_15_15
@@ -759,13 +712,6 @@ module data_mem_d_IP_spram
         .O(spo[15]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "16" *) 
-  (* ram_slice_end = "16" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000018A2B801220)) 
     ram_reg_0_127_16_16
@@ -780,13 +726,6 @@ module data_mem_d_IP_spram
         .O(spo[16]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "17" *) 
-  (* ram_slice_end = "17" *) 
   RAM128X1S #(
     .INIT(128'h0000000000000000000000000BC80298)) 
     ram_reg_0_127_17_17
@@ -801,13 +740,6 @@ module data_mem_d_IP_spram
         .O(spo[17]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "18" *) 
-  (* ram_slice_end = "18" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000000003082C00)) 
     ram_reg_0_127_18_18
@@ -822,13 +754,6 @@ module data_mem_d_IP_spram
         .O(spo[18]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "19" *) 
-  (* ram_slice_end = "19" *) 
   RAM128X1S #(
     .INIT(128'h0000000000000000000009C02B0D3EFC)) 
     ram_reg_0_127_19_19
@@ -843,13 +768,6 @@ module data_mem_d_IP_spram
         .O(spo[19]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "1" *) 
-  (* ram_slice_end = "1" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000001042007991)) 
     ram_reg_0_127_1_1
@@ -864,13 +782,6 @@ module data_mem_d_IP_spram
         .O(spo[1]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "20" *) 
-  (* ram_slice_end = "20" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000062F00C00000)) 
     ram_reg_0_127_20_20
@@ -885,13 +796,6 @@ module data_mem_d_IP_spram
         .O(spo[20]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "21" *) 
-  (* ram_slice_end = "21" *) 
   RAM128X1S #(
     .INIT(128'h000000000000000000000006A993A080)) 
     ram_reg_0_127_21_21
@@ -906,13 +810,6 @@ module data_mem_d_IP_spram
         .O(spo[21]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "22" *) 
-  (* ram_slice_end = "22" *) 
   RAM128X1S #(
     .INIT(128'h0000000000000000000000008F2EE110)) 
     ram_reg_0_127_22_22
@@ -927,13 +824,6 @@ module data_mem_d_IP_spram
         .O(spo[22]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "23" *) 
-  (* ram_slice_end = "23" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000000F84FD5900)) 
     ram_reg_0_127_23_23
@@ -948,13 +838,6 @@ module data_mem_d_IP_spram
         .O(spo[23]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "24" *) 
-  (* ram_slice_end = "24" *) 
   RAM128X1S #(
     .INIT(128'h000000000000000000000F00A83FB890)) 
     ram_reg_0_127_24_24
@@ -969,13 +852,6 @@ module data_mem_d_IP_spram
         .O(spo[24]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "25" *) 
-  (* ram_slice_end = "25" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000000087004100)) 
     ram_reg_0_127_25_25
@@ -990,13 +866,6 @@ module data_mem_d_IP_spram
         .O(spo[25]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "26" *) 
-  (* ram_slice_end = "26" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000062F80C00001)) 
     ram_reg_0_127_26_26
@@ -1011,13 +880,6 @@ module data_mem_d_IP_spram
         .O(spo[26]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "27" *) 
-  (* ram_slice_end = "27" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000163FD0C00003)) 
     ram_reg_0_127_27_27
@@ -1032,13 +894,6 @@ module data_mem_d_IP_spram
         .O(spo[27]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "28" *) 
-  (* ram_slice_end = "28" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000010084004100)) 
     ram_reg_0_127_28_28
@@ -1053,13 +908,6 @@ module data_mem_d_IP_spram
         .O(spo[28]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "29" *) 
-  (* ram_slice_end = "29" *) 
   RAM128X1S #(
     .INIT(128'h0000000000000000000008CCA9080E7C)) 
     ram_reg_0_127_29_29
@@ -1074,13 +922,6 @@ module data_mem_d_IP_spram
         .O(spo[29]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "2" *) 
-  (* ram_slice_end = "2" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000090054084912)) 
     ram_reg_0_127_2_2
@@ -1095,13 +936,6 @@ module data_mem_d_IP_spram
         .O(spo[2]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "30" *) 
-  (* ram_slice_end = "30" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000000000000000)) 
     ram_reg_0_127_30_30
@@ -1116,13 +950,6 @@ module data_mem_d_IP_spram
         .O(spo[30]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "31" *) 
-  (* ram_slice_end = "31" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000062F00C00000)) 
     ram_reg_0_127_31_31
@@ -1137,13 +964,6 @@ module data_mem_d_IP_spram
         .O(spo[31]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "3" *) 
-  (* ram_slice_end = "3" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000111012006890)) 
     ram_reg_0_127_3_3
@@ -1158,13 +978,6 @@ module data_mem_d_IP_spram
         .O(spo[3]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "4" *) 
-  (* ram_slice_end = "4" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000011000000910)) 
     ram_reg_0_127_4_4
@@ -1179,13 +992,6 @@ module data_mem_d_IP_spram
         .O(spo[4]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "5" *) 
-  (* ram_slice_end = "5" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000110002353892)) 
     ram_reg_0_127_5_5
@@ -1200,13 +1006,6 @@ module data_mem_d_IP_spram
         .O(spo[5]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "6" *) 
-  (* ram_slice_end = "6" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000010000000C18)) 
     ram_reg_0_127_6_6
@@ -1221,13 +1020,6 @@ module data_mem_d_IP_spram
         .O(spo[6]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "7" *) 
-  (* ram_slice_end = "7" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000010000028810)) 
     ram_reg_0_127_7_7
@@ -1242,13 +1034,6 @@ module data_mem_d_IP_spram
         .O(spo[7]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "8" *) 
-  (* ram_slice_end = "8" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000018000000810)) 
     ram_reg_0_127_8_8
@@ -1263,13 +1048,6 @@ module data_mem_d_IP_spram
         .O(spo[8]),
         .WCLK(clk),
         .WE(we));
-  (* RTL_RAM_BITS = "4096" *) 
-  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "127" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "9" *) 
-  (* ram_slice_end = "9" *) 
   RAM128X1S #(
     .INIT(128'h00000000000000000000010000000810)) 
     ram_reg_0_127_9_9

@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:dist_mem_gen:8.0
--- IP Revision: 13
+-- IP Revision: 12
 
 -- The following code must appear in the VHDL architecture header.
 
 ------------- Begin Cut here for COMPONENT Declaration ------ COMP_TAG
 COMPONENT inst_mem_rom_IP
   PORT (
-    a : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    a : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
     spo : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END COMPONENT;

@@ -54,7 +54,7 @@
  *******************************************************************************
  *******************************************************************************
  *
- * Filename    : dist_mem_gen_v8_0_13.v
+ * Filename    : dist_mem_gen_v8_0_12.v
  *
  * Author      : Xilinx
  *
@@ -75,7 +75,7 @@
 `define c_dp_ram 2
 `define c_sdp_ram 4
 
-module dist_mem_gen_v8_0_13 (a, d, dpra, clk, we, i_ce, qspo_ce, qdpo_ce, qdpo_clk, qspo_rst, qdpo_rst, qspo_srst, qdpo_srst, spo, dpo, qspo, qdpo);
+module dist_mem_gen_v8_0_12 (a, d, dpra, clk, we, i_ce, qspo_ce, qdpo_ce, qdpo_clk, qspo_rst, qdpo_rst, qspo_srst, qdpo_srst, spo, dpo, qspo, qdpo);
 
    parameter C_FAMILY             = "virtex5";
    parameter C_ADDR_WIDTH         = 6;
@@ -569,7 +569,7 @@ module dist_mem_gen_v8_0_13 (a, d, dpra, clk, we, i_ce, qspo_ce, qdpo_ce, qdpo_c
       end
    endfunction // binstr_conv      
 
-endmodule // dist_mem_gen_v8_0_13
+endmodule // dist_mem_gen_v8_0_12
 
 `undef all0s
 `undef allXs

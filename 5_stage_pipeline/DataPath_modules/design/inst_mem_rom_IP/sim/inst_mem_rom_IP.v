@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:dist_mem_gen:8.0
-// IP Revision: 13
+// IP Revision: 12
 
 `timescale 1ns/1ps
 
@@ -58,14 +58,14 @@ module inst_mem_rom_IP (
   spo
 );
 
-input wire [6 : 0] a;
+input wire [5 : 0] a;
 output wire [31 : 0] spo;
 
-  dist_mem_gen_v8_0_13 #(
+  dist_mem_gen_v8_0_12 #(
     .C_FAMILY("artix7"),
-    .C_ADDR_WIDTH(7),
+    .C_ADDR_WIDTH(6),
     .C_DEFAULT_DATA("0"),
-    .C_DEPTH(128),
+    .C_DEPTH(64),
     .C_HAS_CLK(0),
     .C_HAS_D(0),
     .C_HAS_DPO(0),
@@ -97,7 +97,7 @@ output wire [31 : 0] spo;
   ) inst (
     .a(a),
     .d(32'B0),
-    .dpra(7'B0),
+    .dpra(6'B0),
     .clk(1'D0),
     .we(1'D0),
     .i_ce(1'D1),

@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: xilinx.com:ip:dist_mem_gen:8.0
-// IP Revision: 13
+// IP Revision: 12
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections
@@ -55,7 +55,7 @@
 
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 inst_mem_rom_IP your_instance_name (
-  .a(a),      // input wire [6 : 0] a
+  .a(a),      // input wire [5 : 0] a
   .spo(spo)  // output wire [31 : 0] spo
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
