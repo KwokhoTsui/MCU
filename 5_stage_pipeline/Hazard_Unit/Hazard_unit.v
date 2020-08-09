@@ -5,8 +5,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module Hazard_Unit(StallF, StallD, BranchD, JumpD, ForwardAD, ForwardBD, RsD, RtD, FlushE, RsE, RtE, ForwardAE, ForwardBE, WriteRegE, MemtoRegE, RegWriteE, WriteRegM, RegWriteM, WriteRegW, RegWriteW);
-input BranchD, JumpD, RsD, RtD, RsE, RtE, MemtoRegE, RegWriteE, RegWriteM, RegWriteW;
-input [4:0] WriteRegE, WriteRegM, WriteRegW;
+input BranchD, JumpD, MemtoRegE, RegWriteE, RegWriteM, RegWriteW;
+input [4:0] WriteRegE, WriteRegM, WriteRegW,RsD, RtD, RsE, RtE;
 output reg StallF, StallD, FlushE;
 output reg [1:0] ForwardAD, ForwardBD, ForwardAE, ForwardBE;
 reg lwstall, branchstall;
@@ -28,12 +28,16 @@ always@(*)
         else
             ForwardBE = 2'b00;
         //LW Stall judger
-        if(((RsD == RtE) || (RtD == RtE)) && MemtoRegE) lwstall = 1'b1;
+        if(((RsD == RtE) || (RtD == RtE)) && MemtoRegE&&(RtD!=0)) lwstall = 1'b1;
+        else lwstall = 1'b0;
         //Decode stage Forward (for branch)
         if((RsD != 0) && (RsD == WriteRegM) && RegWriteM) ForwardAD = 1'b1;
+        else ForwardAD = 1'b0;
         if((RtD != 0) && (RtD == WriteRegM) && RegWriteM) ForwardBD = 1'b1;
+        else ForwardBD = 1'b0;
         //Branch Stall judger
         if((BranchD && RegWriteE && (WriteRegE == RsD || WriteRegE == RtD)) || (BranchD && RegWriteM && (WriteRegM == RsD || WriteRegM == RtD))) branchstall = 1'b1;
+        else branchstall = 1'b0;
         //Make the processor stall (due to either a load or a branch hazard)
         StallF = branchstall | lwstall;
         StallD = branchstall | lwstall;

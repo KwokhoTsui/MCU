@@ -32,9 +32,9 @@ output [31:0]RD1,RD2;
 reg [31:0] register [31:0];
 integer i;
 
-always@(posedge CLK || RESET)
+always@(posedge CLK or negedge RESET)
     begin
-        if(RESET)
+        if(!RESET)
             begin
                 for (i=0;i<32;i=i+1) register[i] <= 0;
             end

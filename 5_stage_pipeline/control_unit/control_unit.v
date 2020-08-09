@@ -30,7 +30,7 @@ output MemWrite;
 output [2:0]AluControl;
 output AluSrc;
 output RegWrite;
-output [1:0]Branch;
+output Branch;
 output Jump;
 wire [3:0]AluOp;
 
