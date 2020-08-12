@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="inst_mem_rom_IP_synth_1" LaunchDir="G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.runs/inst_mem_rom_IP_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

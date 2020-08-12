@@ -1,0 +1,50 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Aug 11 23:45:58 2020
+# Process ID: 6372
+# Current directory: G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1596 G:\vivado\MCU-5_stage_pipeline\MCU-5_stage_pipeline\MCU_5pipeline\MCU_5pipeline.xpr
+# Log file: G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/vivado.log
+# Journal file: G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.xpr
+update_compile_order -fileset sources_1
+add_files -norecurse G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/data_mem_d_IP/data_mem_d_IP.xci
+add_files -norecurse {G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/data_mem_d_IP/data_mem_d_IP_stub.v G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/data_mem_d_IP/data_mem_d_IP.veo G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/data_mem_d_IP/data_mem_d_IP.vho G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/data_mem_d_IP/data_mem_d_IP_sim_netlist.v}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/data_mem_d_IP/data_mem_d_IP_stub.v] -no_script -reset -force -quiet
+remove_files  G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/data_mem_d_IP/data_mem_d_IP_stub.v
+export_ip_user_files -of_objects  [get_files G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/data_mem_d_IP/data_mem_d_IP_sim_netlist.v] -no_script -reset -force -quiet
+remove_files  G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/data_mem_d_IP/data_mem_d_IP_sim_netlist.v
+add_files -norecurse G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/5_stage_pipeline.v
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/5_stage_pipeline/5_stage_pipeline.v] -no_script -reset -force -quiet
+remove_files  G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/5_stage_pipeline/5_stage_pipeline.v
+add_files -norecurse {G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/alu_decoder.v G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/main_decoder.v G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/Hazard_unit.v G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/control_unit.v}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/5_stage_pipeline/control_unit/control_unit.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/5_stage_pipeline/Hazard_Unit/Hazard_unit.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/5_stage_pipeline/control_unit/alu_decoder.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/5_stage_pipeline/control_unit/main_decoder.v] -no_script -reset -force -quiet
+remove_files  {G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/5_stage_pipeline/control_unit/control_unit.v G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/5_stage_pipeline/Hazard_Unit/Hazard_unit.v G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/5_stage_pipeline/control_unit/alu_decoder.v G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/5_stage_pipeline/control_unit/main_decoder.v}
+add_files -norecurse G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/Datapath.v
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/5_stage_pipeline/DataPath_modules/design/Datapath.v] -no_script -reset -force -quiet
+remove_files  G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/5_stage_pipeline/DataPath_modules/design/Datapath.v
+launch_simulation
+open_wave_config G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/sim1_behav.wcfg
+source sim1.tcl
+set_property -dict [list CONFIG.coefficient_file {G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/instructions32_comma.coe}] [get_ips inst_mem_rom_IP]
+generate_target all [get_files  G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/5_stage_pipeline/DataPath_modules/design/inst_mem_rom_IP/inst_mem_rom_IP.xci]
+catch { config_ip_cache -export [get_ips -all inst_mem_rom_IP] }
+export_ip_user_files -of_objects [get_files G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/5_stage_pipeline/DataPath_modules/design/inst_mem_rom_IP/inst_mem_rom_IP.xci] -no_script -sync -force -quiet
+reset_run inst_mem_rom_IP_synth_1
+launch_runs -jobs 6 inst_mem_rom_IP_synth_1
+export_simulation -of_objects [get_files G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/5_stage_pipeline/DataPath_modules/design/inst_mem_rom_IP/inst_mem_rom_IP.xci] -directory G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.ip_user_files/sim_scripts -ip_user_files_dir G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.ip_user_files -ipstatic_source_dir G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.cache/compile_simlib/modelsim} {questa=G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.cache/compile_simlib/questa} {riviera=G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.cache/compile_simlib/riviera} {activehdl=G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+relaunch_sim
+save_wave_config {G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/sim1_behav.wcfg}
+save_wave_config {G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/sim1_behav.wcfg}
+close_sim

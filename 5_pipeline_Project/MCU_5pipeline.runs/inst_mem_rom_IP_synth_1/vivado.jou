@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Aug 11 23:57:14 2020
+# Process ID: 4056
+# Current directory: G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.runs/inst_mem_rom_IP_synth_1
+# Command line: vivado.exe -log inst_mem_rom_IP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source inst_mem_rom_IP.tcl
+# Log file: G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.runs/inst_mem_rom_IP_synth_1/inst_mem_rom_IP.vds
+# Journal file: G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.runs/inst_mem_rom_IP_synth_1\vivado.jou
+#-----------------------------------------------------------
+source inst_mem_rom_IP.tcl -notrace

@@ -1,0 +1,37 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../5_stage_pipeline/DataPath_modules/design/data_mem_d_IP/sim/data_mem_d_IP.v" \
+"../../../../../5_stage_pipeline/DataPath_modules/design/inst_mem_rom_IP/sim/inst_mem_rom_IP.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/5_stage_pipeline.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/ALU_Wallace_MUL.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/Datapath.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/Hazard_unit.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/MUL_16x1.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/MUX_2.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/MUX_2_1.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/MUX_32.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/MUX_32_3_1.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/MUX_32_R.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/MUX_5_2_1.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/MUX_8_1.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/Register_File.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/alu.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/alu_and_or.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/alu_decoder.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/carry_select_adder.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/comparator.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/comparator_1bit.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/comparator_1bit_highest.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/control_unit.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/data_mem.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/inst_mem.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/left_shift.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/main_decoder.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/right_shift.v" \
+"../../../../MCU_5pipeline.srcs/sim_1/new/sim1.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

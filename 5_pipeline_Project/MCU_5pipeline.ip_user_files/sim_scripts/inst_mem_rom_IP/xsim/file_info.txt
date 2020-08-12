@@ -1,0 +1,2 @@
+inst_mem_rom_IP.v,verilog,xil_defaultlib,../../../../../5_stage_pipeline/DataPath_modules/design/inst_mem_rom_IP/sim/inst_mem_rom_IP.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

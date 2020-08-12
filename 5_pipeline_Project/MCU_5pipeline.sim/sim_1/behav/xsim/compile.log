@@ -1,0 +1,71 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/5_stage_pipeline/DataPath_modules/design/data_mem_d_IP/sim/data_mem_d_IP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_mem_d_IP
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/5_stage_pipeline/DataPath_modules/design/inst_mem_rom_IP/sim/inst_mem_rom_IP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module inst_mem_rom_IP
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/5_stage_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module five_stage_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/ALU_Wallace_MUL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Wallace_MUL
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignExtend
+INFO: [VRFC 10-311] analyzing module five_pipeline_data_path
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/Hazard_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Hazard_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/MUL_16x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUL_16x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/MUX_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/MUX_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX_2_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/MUX_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/MUX_32_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX_32_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/MUX_32_R.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX_32_R
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/MUX_5_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX_5_2_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/MUX_8_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX_8_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/Register_File.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_File
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/alu_and_or.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_and
+INFO: [VRFC 10-311] analyzing module alu_or
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/alu_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/carry_select_adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX2_1
+INFO: [VRFC 10-311] analyzing module FA
+INFO: [VRFC 10-311] analyzing module BEC_3
+INFO: [VRFC 10-311] analyzing module BEC_4
+INFO: [VRFC 10-311] analyzing module BEC_5
+INFO: [VRFC 10-311] analyzing module BEC_6
+INFO: [VRFC 10-311] analyzing module CLA_2
+INFO: [VRFC 10-311] analyzing module CLA_3
+INFO: [VRFC 10-311] analyzing module CLA_4
+INFO: [VRFC 10-311] analyzing module CLA_5
+INFO: [VRFC 10-311] analyzing module carry_select_adder_16
+INFO: [VRFC 10-311] analyzing module carry_select_adder_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/comparator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/comparator_1bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comparator_1bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/comparator_1bit_highest.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comparator_1bit_highest
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/data_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/inst_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module inst_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/left_shift.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module left_shift
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/main_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/right_shift.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module right_shift
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/vivado/MCU-5_stage_pipeline/MCU-5_stage_pipeline/MCU_5pipeline/MCU_5pipeline.srcs/sim_1/new/sim1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim1
