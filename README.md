@@ -5,6 +5,8 @@ Source：项目源文件，包括Verilog代码、coe文件等
 Simulation：项目仿真文件，只有一个sim_1.v代码
 
 > 注：coe文件未加入git跟踪，需自己写好放入Source文件夹
+>
+> （更新）由于IP core更改时涉及到很多文件更改，data_mem_d_IP和inst_mem_rom_IP两个文件夹也不加入git跟踪
 
 # 使用说明
 
