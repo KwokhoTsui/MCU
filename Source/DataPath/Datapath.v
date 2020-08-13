@@ -140,6 +140,7 @@ assign RtE_HU = RtE;
 assign WriteDataE = OperandB;
 assign MemtoRegE_HU = MemtoRegE;
 assign RegWriteE_HU = RegWriteE;
+assign WriteRegE_HU = WriteRegE;
 MUX_5_2_1 mux4(.in_0(RtE), .in_1(RdE), .sel(RegDstE), .out(WriteRegE));
 MUX_32_3_1 mux5(.in_00(RD1E), .in_01(ResultW), .in_10(ALUOutM), .sel(ForwardAE), .out(SrcAE));
 MUX_32_3_1 mux6(.in_00(RD2E), .in_01(ResultW), .in_10(ALUOutM), .sel(ForwardBE), .out(OperandB));

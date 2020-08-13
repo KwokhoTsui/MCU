@@ -40,4 +40,5 @@ lw $t4, 16($0)
 
 + main_decoder取消addiu功能
 + 改正main_decoder对addi的解码
++ DataPath.v 补上缺失语句 assign WriteRegE_HU = WriteRegE
 
