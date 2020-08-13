@@ -16,7 +16,7 @@
 // ALU_sel = 100: ALU_result = Rmul
 // ALU_sel = 101: ALU_result = Rsrl
 // ALU_sel = 110: ALU_result = Rsub
-// ALU_sel = 111: ALU_result = Rcom
+// ALU_sel = 111: ALU_result = Rslt
 //////////////////////////////////////////////////////////////////////////////////
 
 
