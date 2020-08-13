@@ -15,6 +15,7 @@ additional comments:
 
 module inst_mem(
     input [31:0] A,
+    input reset,
     output [31:0] RD
     );
 

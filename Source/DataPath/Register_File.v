@@ -32,7 +32,7 @@ output [31:0]RD1,RD2;
 reg [31:0] register [31:0];
 integer i;
 
-always@(*)
+always@(posedge CLK or negedge RESET)
     begin
         if(!RESET)
             begin

@@ -24,7 +24,7 @@ module data_mem(
     output [31:0] RD
     );
     data_mem_d_IP your_instance_name (
-  .a(A[6:0]),      // input wire [6 : 0] a
+  .a(A[8:2]),      // input wire [6 : 0] a
   .d(WD),      // input wire [31 : 0] d
   .clk(CLK),  // input wire clk
   .we(WE),    // input wire we
