@@ -15,5 +15,5 @@ module MUX_5_2_1(in_0, in_1, sel, out);
     input[4:0] in_0, in_1;
     input sel;
     output [4:0] out;
-	assign out = (sel == in_0 ? in_0:in_1);
+	assign out = (sel == 1'b0 ? in_0:in_1);
 endmodule

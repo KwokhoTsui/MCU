@@ -20,18 +20,13 @@ Simulation：在项目的源文件框中，选择add simulation file，选择本
 
 ```powershell
 lw $t2, 16($0)
-lw $t1, 4($0)
-add $s0, $t1, $t2
-sub $t0, $t1, $t2
-sw $t0, 20($t0)
-sw $s0, -12($t2)
-lw $t3, 4($0)
-lw $t4, 16($0)
+addi $t1, $t1, 0xffff
 ```
 
 ### 已知错误
 
 + ~~control unit 代码对于部分I型指令（如addi）无法正确解码~~
++ ~~lw 指令无法正确执行~~
 + jump指令无法正确执行
 
 # 修改日志
@@ -42,4 +37,5 @@ lw $t4, 16($0)
 + 改正main_decoder对addi的解码
 + DataPath.v 补上缺失语句 assign WriteRegE_HU = WriteRegE
 + DataPath.v 增加EqualD声明
++ 修复MUX_5_2_1的bug
 
