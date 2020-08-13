@@ -29,6 +29,13 @@ lw $t4, 16($0)
 
 ### 已知错误
 
-+ control unit 代码对于部分I型指令（如addi）无法正确解码
++ ~~control unit 代码对于部分I型指令（如addi）无法正确解码~~
 + jump指令无法正确执行
+
+# 修改日志
+
+### 20200813 —— xgh
+
++ main_decoder取消addiu功能
++ 改正main_decoder对addi的解码
 
