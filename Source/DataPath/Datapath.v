@@ -30,7 +30,7 @@ reg [31:0] PCF;
 wire [31:0] newPC, InstrF, PCPlus4F;
 
 reg [31:0] InstrD, PCPlus4D;
-wire CLRD;
+wire CLRD, EqualD;
 wire [1:0] PCSrcD;
 wire [4:0] RsD, RtD, RdD;
 wire [31:0] SignImmD, PCBranchD, PCJumpD, EqualSrcA, EqualSrcB, RD1D, RD2D;
