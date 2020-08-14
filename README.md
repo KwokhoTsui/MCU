@@ -18,10 +18,29 @@ Simulation：在项目的源文件框中，选择add simulation file，选择本
 
 ### 已跑通指令
 
+#### 20200813
+
 ```powershell
+# 单个指令分别跑
 lw $t2, 16($0)
 addi $t1, $t1, 0xffff
 ```
+
+#### 20200814
+
+~~~powershell
+# 全部指令一起跑
+lw $t2, 16($0)
+lw $t1, 4($0)
+add $s0, $t1, $t2
+sub $t0, $t1, $t2
+sw $t0, 20($t0)
+sw $s0, -12($t2)
+lw $t3, 4($0)
+lw $t4, 16($0)
+~~~
+
+
 
 ### 已知错误
 
@@ -32,7 +51,7 @@ addi $t1, $t1, 0xffff
 
 # 修改日志
 
-### 20200813 —— xgh
+### 20200813
 
 + main_decoder取消addiu功能
 + 改正main_decoder对addi的解码
@@ -40,7 +59,7 @@ addi $t1, $t1, 0xffff
 + DataPath.v 增加EqualD声明
 + 修复MUX_5_2_1的bug
 
-### 20200814 —— xgh
+### 20200814
 
 + 修改Register File，使其在时钟**下降沿**写入数据
 
