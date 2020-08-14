@@ -27,6 +27,7 @@ addi $t1, $t1, 0xffff
 
 + ~~control unit 代码对于部分I型指令（如addi）无法正确解码~~
 + ~~lw 指令无法正确执行~~
++ ~~Register File写入数据要在Write Back阶段的下一周期才能完成~~
 + jump指令无法正确执行
 
 # 修改日志
@@ -38,4 +39,8 @@ addi $t1, $t1, 0xffff
 + DataPath.v 补上缺失语句 assign WriteRegE_HU = WriteRegE
 + DataPath.v 增加EqualD声明
 + 修复MUX_5_2_1的bug
+
+### 20200814 —— xgh
+
++ 修改Register File，使其在时钟**下降沿**写入数据
 

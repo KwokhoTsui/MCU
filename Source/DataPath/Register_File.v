@@ -15,6 +15,8 @@ RD2（图中的RD2）：根据address输出的对应数据
 
 additional comments:
 每个register的编号可以查看教材184页表格, e.g. 0:$0, 1:$at, 2:$v0 ......
+
+对于流水线处理器，RF在CLK的下降沿进行写入操作！
 */
 
 //////////////////////////////////////////////////////////////////////////////////
@@ -32,7 +34,7 @@ output [31:0]RD1,RD2;
 reg [31:0] register [31:0];
 integer i;
 
-always@(posedge CLK or negedge RESET)
+always@(negedge CLK or negedge RESET)
     begin
         if(!RESET)
             begin
@@ -43,7 +45,6 @@ always@(posedge CLK or negedge RESET)
                 if ((A3!=0)&&WE3) register[A3] <= WD3;
             end
     end 
-
 assign RD1=(A1==0)?0:register[A1];
 assign RD2=(A2==0)?0:register[A2];
 
