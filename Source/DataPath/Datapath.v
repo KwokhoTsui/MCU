@@ -56,10 +56,8 @@ wire [31:0]ResultW;
 always @(posedge clk or negedge reset)
     begin
         if(!reset) PCF <= 32'h0;
-        else
-            begin
-                if(!StallF) PCF <= newPC;
-            end
+        else if(StallF) PCF <= PCF;
+        else PCF <= newPC;
     end
 assign PCPlus4F = PCF + 32'h4;
 inst_mem instruction_memory(.A(PCF), .RD(InstrF));
@@ -67,20 +65,20 @@ MUX_32_3_1 mux1(.in_00(PCPlus4F), .in_01(PCBranchD), .in_10(PCJumpD), .sel(PCSrc
 /**************************Decode***********************/
 always@(posedge clk or negedge reset)
     begin
-        if (!reset)
+        if ((!reset) || CLRD)
             begin
                 InstrD <= 32'h0;
                 PCPlus4D <= 32'h0;
             end
-        else if(!StallD)
+        else if(StallD)
+            begin
+                InstrD <= InstrD;
+                PCPlus4D <= PCPlus4D;
+            end
+        else
             begin
                 InstrD <= InstrF;
                 PCPlus4D <= PCPlus4F;
-            end
-        else if(CLRD)
-            begin
-                InstrD <= 32'h0;
-                PCPlus4D <= 32'h0;
             end
     end
 assign CLRD = PCSrcD[0] | PCSrcD[1];
