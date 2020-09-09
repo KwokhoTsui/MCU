@@ -7,7 +7,7 @@
 // alu_and:输入为 2 个 32 bit 的数，输出为两数按位与的结果
 // alu_or:输入位 2 个 32 bit 的数，输出为两数按位或的结果
 // comparator: 输入为 2 个 32 bit 的数，输出为 32 bit 的大于标志位（最后一位为标志位，其余位为0）
-// ALU_Wallace_MUL: 输入为 2 个 16 bit 的数，输出为 16 bit 相乘后的结果
+// booth_multiplier_16: 输入为 2 个 16 bit 的数，输出为32bit相乘后的结果
 // Additional Comments:
 // ALU_sel = 000: ALU_result = Rand
 // ALU_sel = 001: ALU_result = Ror
@@ -37,7 +37,7 @@ module alu(
     carry_select_adder_32 A_sub(.x(A), .y(~B), .cin(1), .s(Rsub), .cout(), .OF(OF));
     left_shift A_sll(.A(A), .B(B), .result(Rsll));
     right_shift A_srl(.A(A),.B(B),.result(Rsrl));
-    ALU_Wallace_MUL A_mul(.A(A),.B(B),.mul_result(Rmul));
+    booth_multiplier_16 A_mul(.real_x(A[15:0]), .real_y(B[15:0]), .product(Rmul));
 
     
     MUX_8_1 A_mux(.sel(ALU_sel), .in0(Rand), .in1(Ror), .in2(Radd), .in3(Rsll), .in4(Rmul), .in5(Rsrl), .in6(Rsub), .in7(Rslt), .R(ALU_result));
