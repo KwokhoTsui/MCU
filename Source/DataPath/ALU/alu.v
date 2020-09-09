@@ -32,7 +32,7 @@ module alu(
     
     alu_and A_and(.a(A), .b(B), .Rand(Rand));
     alu_or A_or(.a(A), .b(B), .Ror(Ror));
-    comparator A_com(.A(A), .B(B), .G(Rslt));
+    comparator A_com(.A(A), .B(B), .result(Rslt));
     carry_select_adder_32 A_add(.x(A), .y(B), .cin(0), .s(Radd), .cout(), .OF(OF));
     carry_select_adder_32 A_sub(.x(A), .y(~B), .cin(1), .s(Rsub), .cout(), .OF(OF));
     left_shift A_sll(.A(A), .B(B), .result(Rsll));
