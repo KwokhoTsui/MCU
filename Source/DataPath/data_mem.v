@@ -20,15 +20,24 @@ module data_mem(
     input [31:0] WD,
     input CLK,
     input WE,
-    
+    input [31:0]cnt,
+
     output [31:0] RD
     );
     data_mem_d_IP your_instance_name (
-  .a(A[8:2]),      // input wire [6 : 0] a
+  .a(A[10:2]),      // input wire [8 : 0] a
   .d(WD),      // input wire [31 : 0] d
   .clk(CLK),  // input wire clk
   .we(WE),    // input wire we
   .spo(RD)  // output wire [31 : 0] spo
+);
+ila_1 data_RD (
+	.clk(CLK), // input wire clk
+
+
+	.probe0(cnt), // input wire [31:0]  probe0  
+	.probe1(RD), // input wire [31:0]  probe1 
+	.probe2(WD) // input wire [31:0]  probe2
 );
 
 endmodule

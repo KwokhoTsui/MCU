@@ -35,19 +35,22 @@ wire [1:0] PCSrcD;
 wire [4:0] RsD, RtD, RdD;
 wire [31:0] SignImmD, PCBranchD, PCJumpD, EqualSrcA, EqualSrcB, RD1D, RD2D;
 
-reg RegWriteE, MemtoRegE, MemWriteE, ALUSrcE, RegDstE;
+reg RegWriteE, MemtoRegE, MemWriteE, RegDstE;
+(* max_fanout = "15" *) reg ALUSrcE;
 reg [2:0]ALUControlE;
 reg [4:0] RsE, RtE, RdE;
-reg [31:0] RD1E, RD2E, SignImmE;
+reg [31:0] RD1E, RD2E;
+(* max_fanout = "15" *) reg [31:0]SignImmE;
 wire CLRE;
 wire [4:0] WriteRegE;
 wire [31:0] SrcAE, OperandB, SrcBE, WriteDataE, ALUOutE;
 
-reg RegWriteM, MemtoRegM, MemWriteM;
+reg MemtoRegM, MemWriteM;
+(* max_fanout = "20" *) reg RegWriteM;
 reg [31:0] ALUOutM, WriteDataM;
 reg [4:0] WriteRegM;
+wire [31:0] cnt;
 wire [31:0] ReadDataM, ALUOutM_wire;
-wire [15:0] FINAL_RES;
 
 reg RegWriteW, MemtoRegW;
 reg [4:0] WriteRegW;
@@ -103,7 +106,21 @@ MUX_2_1 mux3(.in_0(RD2D), .in_1(ALUOutM), .sel(ForwardBD), .out(EqualSrcB));
 /**************************Execution***************************/
 always@(posedge clk or negedge reset)
     begin
-        if((!reset) || CLRE) begin
+        if(!reset) begin
+                RegWriteE <= 0;
+                MemtoRegE<=0;
+                MemWriteE <= 0;
+                ALUControlE<= 0;
+                ALUSrcE <= 0;
+                RegDstE <= 0;
+                RD1E <= 0;
+                RD2E <= 0;
+                SignImmE <= 0;
+                RsE <= 0;
+                RtE <= 0;
+                RdE <= 0;
+        end
+        else if(CLRE) begin
                 RegWriteE <= 0;
                 MemtoRegE<=0;
                 MemWriteE <= 0;
@@ -170,8 +187,8 @@ always@(posedge clk or negedge reset)
 assign WriteRegM_HU = WriteRegM;
 assign RegWriteM_HU = RegWriteM;
 assign ALUOutM_wire = ALUOutM;
-assign FINAL_RES = {ReadDataM[30], ReadDataM[26:24], ReadDataM[23:12]};//结果展示用，截取16位结果
-data_mem data_memory(.A(ALUOutM_wire), .WD(WriteDataM), .WE(MemWriteM), .CLK(clk), .RD(ReadDataM));
+data_mem data_memory(.cnt(cnt),.A(ALUOutM_wire), .WD(WriteDataM), .WE(MemWriteM), .CLK(clk), .RD(ReadDataM));
+cnt cnt_1(.reset(reset),.clk(clk),.data_mem(ReadDataM),.cnt(cnt));
 /*****************************Write Back****************************/
 always@(posedge clk or negedge reset)
     begin
