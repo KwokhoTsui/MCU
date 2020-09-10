@@ -29,7 +29,8 @@ output [5:0] Op, Funct;
 reg [31:0] PCF;
 wire [31:0] newPC, InstrF, PCPlus4F;
 
-reg [31:0] InstrD, PCPlus4D;
+reg [31:0] InstrD;
+reg [31:0] PCPlus4D;
 wire CLRD, EqualD;
 wire [1:0] PCSrcD;
 wire [4:0] RsD, RtD, RdD;
@@ -49,7 +50,7 @@ reg MemtoRegM, MemWriteM;
 (* max_fanout = "20" *) reg RegWriteM;
 reg [31:0] ALUOutM, WriteDataM;
 reg [4:0] WriteRegM;
-wire [31:0] cnt;
+wire [31:0]cnt;
 wire [31:0] ReadDataM, ALUOutM_wire;
 
 reg RegWriteW, MemtoRegW;
@@ -104,6 +105,7 @@ SignExtend sign_extend(.x(InstrD[15:0]), .y(SignImmD));
 MUX_2_1 mux2(.in_0(RD1D), .in_1(ALUOutM), .sel(ForwardAD), .out(EqualSrcA));
 MUX_2_1 mux3(.in_0(RD2D), .in_1(ALUOutM), .sel(ForwardBD), .out(EqualSrcB));
 /**************************Execution***************************/
+assign CLRE = FlushE;
 always@(posedge clk or negedge reset)
     begin
         if(!reset) begin
@@ -150,7 +152,7 @@ always@(posedge clk or negedge reset)
                 SignImmE <= SignImmD;
             end
     end
-assign CLRE = FlushE;
+
 assign RsE_HU = RsE;
 assign RtE_HU = RtE;
 assign WriteDataE = OperandB;
@@ -189,6 +191,7 @@ assign RegWriteM_HU = RegWriteM;
 assign ALUOutM_wire = ALUOutM;
 data_mem data_memory(.cnt(cnt),.A(ALUOutM_wire), .WD(WriteDataM), .WE(MemWriteM), .CLK(clk), .RD(ReadDataM));
 cnt cnt_1(.reset(reset),.clk(clk),.data_mem(ReadDataM),.cnt(cnt));
+
 /*****************************Write Back****************************/
 always@(posedge clk or negedge reset)
     begin

@@ -4,8 +4,8 @@
 // ×ÓÄ£¿é£ºÎÞ
 //////////////////////////////////////////////////////////////////////////////////
 
-module Hazard_Unit(StallF, StallD, BranchD, JumpD, ForwardAD, ForwardBD, RsD, RtD, FlushE, RsE, RtE, ForwardAE, ForwardBE, WriteRegE, MemtoRegE, RegWriteE, WriteRegM, RegWriteM, WriteRegW, RegWriteW);
-input BranchD, JumpD, MemtoRegE, RegWriteE, RegWriteM, RegWriteW;
+module Hazard_Unit(clk,StallF, StallD, BranchD, JumpD, ForwardAD, ForwardBD, RsD, RtD, FlushE, RsE, RtE, ForwardAE, ForwardBE, WriteRegE, MemtoRegE, RegWriteE, WriteRegM, RegWriteM, WriteRegW, RegWriteW);
+input BranchD, JumpD, MemtoRegE, RegWriteE, RegWriteM, RegWriteW,clk;
 input [4:0] WriteRegE, WriteRegM, WriteRegW,RsD, RtD, RsE, RtE;
 output reg StallF, StallD, FlushE;
 output reg [1:0] ForwardAD, ForwardBD, ForwardAE, ForwardBE;

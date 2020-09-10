@@ -21,11 +21,11 @@ module data_mem(
     input CLK,
     input WE,
     input [31:0]cnt,
-
+    
     output [31:0] RD
     );
     data_mem_d_IP your_instance_name (
-  .a(A[10:2]),      // input wire [8 : 0] a
+  .a(A[10:2]),      // input wire [6 : 0] a
   .d(WD),      // input wire [31 : 0] d
   .clk(CLK),  // input wire clk
   .we(WE),    // input wire we
