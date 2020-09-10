@@ -47,6 +47,7 @@ reg RegWriteM, MemtoRegM, MemWriteM;
 reg [31:0] ALUOutM, WriteDataM;
 reg [4:0] WriteRegM;
 wire [31:0] ReadDataM, ALUOutM_wire;
+wire [15:0] FINAL_RES;
 
 reg RegWriteW, MemtoRegW;
 reg [4:0] WriteRegW;
@@ -169,6 +170,7 @@ always@(posedge clk or negedge reset)
 assign WriteRegM_HU = WriteRegM;
 assign RegWriteM_HU = RegWriteM;
 assign ALUOutM_wire = ALUOutM;
+assign FINAL_RES = {ReadDataM[30], ReadDataM[26:24], ReadDataM[23:12]};//结果展示用，截取16位结果
 data_mem data_memory(.A(ALUOutM_wire), .WD(WriteDataM), .WE(MemWriteM), .CLK(clk), .RD(ReadDataM));
 /*****************************Write Back****************************/
 always@(posedge clk or negedge reset)

@@ -38,6 +38,6 @@ end
 end
 
 initial begin
-#200 $stop;
+#100000 $stop;
 end
 endmodule
