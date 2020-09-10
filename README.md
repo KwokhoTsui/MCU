@@ -4,9 +4,7 @@ Source：项目源文件，包括Verilog代码、coe文件等
 
 Simulation：项目仿真文件，只有一个sim_1.v代码
 
-> 注：coe文件未加入git跟踪，需自己写好放入Source文件夹
->
-> （更新）由于IP core更改时涉及到很多文件更改，data_mem_d_IP和inst_mem_rom_IP两个文件夹也不加入git跟踪
+> 注：由于IP core更改时涉及到很多文件更改，data_mem_d_IP和inst_mem_rom_IP两个文件夹也不加入git跟踪
 
 # 使用说明
 
@@ -40,6 +38,12 @@ lw $t3, 4($0)
 lw $t4, 16($0)
 ~~~
 
+#### 20200910
+
+~~~powershell
+lw, sw, addi, add, sub, mult, j, beq, slt等
+~~~
+
 
 
 ### 已知错误
@@ -71,3 +75,7 @@ lw $t4, 16($0)
 
 + 增加Booth-Wallace乘法器，替换原乘法器
 + 改正comparator，A < B时，输出为1；否则输出0；
+
+### 20200910
+
++ 数据通路增加输出信号线，可以直接看16位输出
