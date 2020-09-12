@@ -20,7 +20,7 @@ module inst_mem(
     );
 
 inst_mem_rom_IP your_instance_name (
-  .a(A[11:2]),      // input wire [6 : 0] a
+  .a(A[13:2]),      // input wire [6 : 0] a
   .spo(RD)  // output wire [31 : 0] spo
 );
 

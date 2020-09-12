@@ -50,8 +50,9 @@ reg MemtoRegM, MemWriteM;
 (* max_fanout = "20" *) reg RegWriteM;
 reg [31:0] ALUOutM, WriteDataM;
 reg [4:0] WriteRegM;
-wire [31:0]cnt;
+wire [31:0] cnt;
 wire [31:0] ReadDataM, ALUOutM_wire;
+wire [15:0] final_result;
 
 reg RegWriteW, MemtoRegW;
 reg [4:0] WriteRegW;

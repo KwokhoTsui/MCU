@@ -83,7 +83,7 @@ ila_0 ILA0 (
 	.clk(CLK), // input wire clk
 
 
-    .probe0(register[0]),
+    /*.probe0(register[0]),
     .probe1(register[1]),
     .probe2(register[2]),
     .probe3(register[3]),
@@ -98,12 +98,12 @@ ila_0 ILA0 (
     .probe12(register[12]),
     .probe13(register[13]),
     .probe14(register[14]),
-    .probe15(register[15]),
-    .probe16(register[16]),
-    .probe17(register[17]),
-    .probe18(register[18]),
-    .probe19(register[19]),
-    .probe20(register[20]),
+    .probe15(register[15]),*/
+    .probe0(register[16]),
+    .probe1(register[17]),
+    .probe2(register[18]),
+    .probe3(register[19])
+    /*.probe20(register[20]),
     .probe21(register[21]),
     .probe22(register[22]),
     .probe23(register[23]),
@@ -114,6 +114,6 @@ ila_0 ILA0 (
     .probe28(register[28]),
     .probe29(register[29]),
     .probe30(register[30]),
-    .probe31(register[31])
+    .probe31(register[31])*/
 );
 endmodule

@@ -2,10 +2,16 @@
 //////////////////////////////////////////////////////////////////////////////////
 // 描述：本文件为5级流水线处理器（电路图参照原理图）
 //////////////////////////////////////////////////////////////////////////////////
-module five_stage_pipeline(clk ,reset);
-input clk, reset;
-
-wire clk, reset, RegWriteD, MemtoRegD, MemWriteD, AluSrcD, RegDstD, BranchD, JumpD, StallF, StallD, ForwardAD, ForwardBD, FlushE;
+module five_stage_pipeline(CLK ,reset);
+input CLK, reset;
+wire clk;
+  clk_wiz_0 instance_name
+   (
+    // Clock out ports
+    .clk_out1(clk),     // output clk_out1
+   // Clock in ports
+    .clk_in1(CLK)); 
+wire  RegWriteD, MemtoRegD, MemWriteD, AluSrcD, RegDstD, BranchD, JumpD, StallF, StallD, ForwardAD, ForwardBD, FlushE;
 wire [1:0] ForwardAE, ForwardBE;
 wire [2:0] AluControlD;
 wire [4:0] RsD_HU, RtD_HU, RsE_HU, RtE_HU, WriteRegE_HU, WriteRegM_HU, WriteRegW_HU;

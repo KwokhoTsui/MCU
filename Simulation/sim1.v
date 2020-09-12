@@ -22,7 +22,7 @@
 module sim1();
 reg clk;
 reg reset;
-five_stage_pipeline Y1(.reset(reset), .clk(clk));
+five_stage_pipeline Y1(.reset(reset), .CLK(clk));
 initial
 begin
 reset=0;
@@ -38,6 +38,6 @@ end
 end
 
 initial begin
-#100000 $stop;
+#50000 $stop;
 end
 endmodule

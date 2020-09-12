@@ -16,14 +16,14 @@ always@(*)
         //Data Forward
         if((RsE != 0) && (WriteRegM == RsE) && RegWriteM)
             ForwardAE = 2'b10;
-        else if((RsE != 0) && (WriteRegW == RsE) && WriteRegW)
+        else if((RsE != 0) && (WriteRegW == RsE) && RegWriteW)
             ForwardAE = 2'b01;
         else
             ForwardAE = 2'b00;
 
         if((RtE != 0) && (WriteRegM == RtE) && RegWriteM)
             ForwardBE = 2'b10;
-        else if((RtE != 0) && (WriteRegW == RtE) && WriteRegW)
+        else if((RtE != 0) && (WriteRegW == RtE) && RegWriteW)
             ForwardBE = 2'b01;
         else
             ForwardBE = 2'b00;

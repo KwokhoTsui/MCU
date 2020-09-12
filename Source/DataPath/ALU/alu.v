@@ -33,14 +33,14 @@ module alu(
     alu_and A_and(.a(A), .b(B), .Rand(Rand));
     alu_or A_or(.a(A), .b(B), .Ror(Ror));
     comparator A_com(.A(A), .B(B), .result(Rslt));
-    carry_select_adder_32 A_add(.x(A), .y(B), .cin(0), .s(Radd), .cout(), .OF(OF1));
-    carry_select_adder_32 A_sub(.x(A), .y(~B), .cin(1), .s(Rsub), .cout(), .OF(OF2));
+    carry_select_adder_32 A_add(.x(A), .y(B), .cin(1'b0), .s(Radd), .cout(), .OF(OF1));
+    carry_select_adder_32 A_sub(.x(A), .y(~B), .cin(1'b1), .s(Rsub), .cout(), .OF(OF2));
     left_shift A_sll(.A(A), .B(B), .result(Rsll));
     right_shift A_srl(.A(A),.B(B),.result(Rsrl));
-    //booth_multiplier_16 A_mul(.real_x(A[15:0]), .real_y(B[15:0]), .product(Rmul));
+    booth_multiplier_16 A_mul(.real_x(A[15:0]), .real_y(B[15:0]), .product(Rmul));
 
     
-    MUX_8_1 A_mux(.sel(ALU_sel), .in0(Rand), .in1(Ror), .in2(Radd), .in3(Rsll), .in4(32'b0), .in5(Rsrl), .in6(Rsub), .in7(Rslt), .R(ALU_result));
+    MUX_8_1 A_mux(.sel(ALU_sel), .in0(Rand), .in1(Ror), .in2(Radd), .in3(Rsll), .in4(Rmul), .in5(Rsrl), .in6(Rsub), .in7(Rslt), .R(ALU_result));
     
     assign OF = OF1 | OF2;
 endmodule
