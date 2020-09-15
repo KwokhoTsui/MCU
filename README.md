@@ -1,16 +1,20 @@
 # 文件说明
 
+**此版本为卷积测试时用的版本**
+
 Source：项目源文件，包括Verilog代码、coe文件等
 
 Simulation：项目仿真文件，只有一个sim_1.v代码
 
-> 注：由于IP core更改时涉及到很多文件更改，data_mem_d_IP和inst_mem_rom_IP两个文件夹也不加入git跟踪
+> 注：由于IP core更改时涉及到很多文件更改，data_mem_d_IP和inst_mem_rom_IP两个文件夹不加入git跟踪
 
 # 使用说明
 
 Source：创建项目时，在add source file对话框选择add directory，选择本文件夹
 
-Simulation：在项目的源文件框中，选择add simulation file，选择本文件夹内的sim_1.v文件
+Simulation：创建项目时，在add source file对话框选择add directory，选择本文件夹，设为"simulation only"，进入项目后，将sim1.v设置为"set as top"
+
+> 卷积指令和数据coe文件都在Source/coe/文件夹内
 
 # 项目日志
 
