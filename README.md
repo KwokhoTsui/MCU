@@ -16,6 +16,20 @@ Simulation：创建项目时，在add source file对话框选择add directory，
 
 > 卷积指令和数据coe文件都在Source/coe/文件夹内
 
+### 引用/Reference
+
+This repository is contributed by [Guohao Xu](https://github.com/KwokhoTsui), [Jiayi Tang](https://github.com/JoyyTj) and [Jinwei Xie](https://github.com/uestcXJW) If you consider using this code or its derivatives, please consider citing:
+
+~~~latex
+@code{code,
+	title={5_stage_pipeline},
+	author={Xu, GuoHao and Tang, JiaYi and Xie, JinWei},
+	year={2020}
+}
+~~~
+
+###### ~~（下面可以不看了~~
+
 # 项目日志
 
 ### 已跑通指令
