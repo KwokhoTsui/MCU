@@ -18,7 +18,7 @@ Simulation：创建项目时，在add source file对话框选择add directory，
 
 ### 引用/Reference
 
-This repository is contributed by [Guohao Xu](https://github.com/KwokhoTsui), [Jiayi Tang](https://github.com/JoyyTj) and [Jinwei Xie](https://github.com/uestcXJW) If you consider using this code or its derivatives, please consider citing:
+This repository is contributed by [Guohao Xu](https://github.com/KwokhoTsui), [Jiayi Tang](https://github.com/JoyyTj) and [Jinwei Xie](https://github.com/uestcXJW). If you consider using this code or its derivatives, please consider citing:
 
 ~~~latex
 @code{code,
